@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
+    "version": 3,
+    "settings": {
+        "color": {
+            "palette": [
+                {
+                    "color": "#FFFFFF",
+                    "name": "Blanc",
+                    "slug": "white"
+                },
+                {
+                    "color": "#000000",
+                    "name": "Noir",
+                    "slug": "black"
+                },
+                {
+                    "color": "#3366FF",
+                    "name": "Primaire",
+                    "slug": "primary"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "name": "Police des textes",
+                    "slug": "base",
+                    "fontFamily": "'Poppins', sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Poppins",
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Poppins-Regular.woff2"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

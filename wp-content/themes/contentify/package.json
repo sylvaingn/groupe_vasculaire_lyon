@@ -1,0 +1,21 @@
+{
+    "type": "module",
+    "scripts": {
+        "setup": "node setup-local.js",
+        "build": "gulp build",
+        "watch": "gulp watch",
+        "block": "node ../contentify-parent/block_generator.cjs --parent=../contentify-parent",
+        "pull": "git pull && cd ../contentify-parent && git pull"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.22",
+        "browser-sync": "^3.0.4",
+        "dotenv": "^17.2.3",
+        "gulp": "^5.0.1",
+        "gulp-esbuild": "^0.14.1",
+        "gulp-minify-css": "^1.2.4",
+        "gulp-postcss": "^10.0.0",
+        "gulp-sass": "^6.0.1",
+        "sass": "^1.94.2"
+    }
+}
