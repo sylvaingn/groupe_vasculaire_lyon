@@ -1,0 +1,19 @@
+// Variables CSS - Thème Enfant (Groupe Vasculaire Lyon)
+// Ces variables écrasent celles du thème parent
+
+:root {
+	// Couleurs de base
+	--color-primary: var(--wp--preset--color--primary);
+	--color-primary-light: var(--wp--preset--color--primary-light);
+	--color-secondary: var(--wp--preset--color--secondary);
+	--color-secondary-light: var(--wp--preset--color--secondary-light);
+	--color-black: var(--wp--preset--color--black);
+	--color-white: var(--wp--preset--color--white);
+
+	// Typographie
+	--font-family-base: var(--wp--preset--font-family--base);
+	--font-family-title: var(--wp--preset--font-family--title);
+	--font-family-button: var(--wp--preset--font-family--button);
+
+
+}

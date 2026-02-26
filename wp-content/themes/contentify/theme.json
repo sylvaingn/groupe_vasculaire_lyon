@@ -5,19 +5,34 @@
         "color": {
             "palette": [
                 {
-                    "color": "#FFFFFF",
-                    "name": "Blanc",
-                    "slug": "white"
+                    "color": "#002B8D",
+                    "name": "Primaire",
+                    "slug": "primary"
                 },
                 {
-                    "color": "#000000",
+                    "color": "#D5E2FF",
+                    "name": "Primaire clair",
+                    "slug": "primary-light"
+                },
+                {
+                    "color": "#EE1B24",
+                    "name": "Secondaire",
+                    "slug": "secondary"
+                },
+                {
+                    "color": "#FBEAEB",
+                    "name": "Secondaire clair",
+                    "slug": "secondary-light"
+                },
+                {
+                    "color": "#131313",
                     "name": "Noir",
                     "slug": "black"
                 },
                 {
-                    "color": "#3366FF",
-                    "name": "Primaire",
-                    "slug": "primary"
+                    "color": "#FFFFFF",
+                    "name": "Blanc",
+                    "slug": "white"
                 }
             ]
         },
@@ -26,18 +41,127 @@
                 {
                     "name": "Police des textes",
                     "slug": "base",
-                    "fontFamily": "'Poppins', sans-serif",
+                    "fontFamily": "'Inter', sans-serif",
                     "fontFace": [
                         {
-                            "fontFamily": "Poppins",
+                            "fontFamily": "Inter",
                             "fontWeight": "400",
                             "fontStyle": "normal",
                             "fontStretch": "normal",
                             "src": [
-                                "file:./assets/fonts/Poppins-Regular.woff2"
+                                "file:./assets/fonts/Inter_18pt-Regular.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-Medium.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-SemiBold.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-Bold.woff2"
                             ]
                         }
                     ]
+                },
+                {
+                    "name": "Police des titres",
+                    "slug": "title",
+                    "fontFamily": "'Inter', sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-SemiBold.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-Bold.woff2"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Police des boutons",
+                    "slug": "button",
+                    "fontFamily": "'Inter', sans-serif",
+                    "fontFace": [
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-Medium.woff2"
+                            ]
+                        },
+                        {
+                            "fontFamily": "Inter",
+                            "fontWeight": "600",
+                            "fontStyle": "normal",
+                            "fontStretch": "normal",
+                            "src": [
+                                "file:./assets/fonts/Inter_18pt-SemiBold.woff2"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Petit texte",
+                    "slug": "small-text",
+                    "size": "14px"
+                },
+                {
+                    "name": "Normal",
+                    "slug": "normal-text",
+                    "size": "18px"
+                },
+                {
+                    "name": "Titre de carte",
+                    "slug": "card-title",
+                    "size": "clamp(20px, 5vw, 25px)"
+                },
+                {
+                    "name": "Titre de section - Moyen",
+                    "slug": "section-title-medium",
+                    "size": "clamp(25px, 5vw, 36px)"
+                },
+                {
+                    "name": "Titre de section",
+                    "slug": "section-title",
+                    "size": "clamp(30px, 5vw, 65px)"
+                },
+                {
+                    "name": "Titre d'en-tête",
+                    "slug": "head-title",
+                    "size": "clamp(40px, 5vw, 80px)"
                 }
             ]
         }

@@ -1,0 +1,56 @@
+.btn {
+	display: inline-block;
+	padding: 1em 1.4375em;
+	border-radius: 50px;
+	text-decoration: none;
+	text-align: center;
+	transition: all 0.3s ease;
+	font-family: var(--font-family-button);
+	font-weight: 500;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: var(--color-primary);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-primary-light);
+		color: var(--color-primary);
+	}
+
+	// Bouton Secondary (fond secondary, texte blanc)
+	&.btn-secondary {
+		background-color: var(--color-secondary);
+		color: var(--color-white);
+
+		&:hover {
+			background-color: var(--color-secondary-light);
+			color: var(--color-secondary);
+		}
+	}
+
+	// Bouton Outline (fond blanc, texte primary)
+	&.btn-white {
+		background-color: var(--color-white);
+		color: var(--color-primary);
+
+		&:hover {
+			background-color: var(--color-primary);
+			color: var(--color-white);
+		}
+	}
+}
+
+
+.tag{
+	display: inline-block;
+	padding: 0.57em 1.24em;
+	border-radius: 50px;
+	font-size: var(--wp--preset--font-size--small-text);
+	background-color: var(--color-primary-light);
+	color: var(--color-primary);
+	font-weight: 600;
+
+	&.tag-secondary{
+		background-color: var(--color-secondary-light);
+		color: var(--color-secondary);
+	}
+}

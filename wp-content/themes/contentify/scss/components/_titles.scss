@@ -1,0 +1,25 @@
+
+.title {
+	//display: block;
+	font-family: var(--font-family-title);
+	letter-spacing: -2px;
+}
+
+.head-title{
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--head-title);
+}
+
+.section-title {
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--section-title);
+}
+
+.section-title--medium {
+	font-weight: 600;
+	font-size: var(--wp--preset--font-size--section-title-medium);
+}
+
+.card-title{
+	font-size: var(--wp--preset--font-size--card-title);
+}
