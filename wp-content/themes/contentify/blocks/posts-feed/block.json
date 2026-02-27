@@ -16,8 +16,8 @@
         "align": false,
         "anchor": false,
         "color": {
-            "text": false,
-            "background": false
+            "text": true,
+            "background": true
         },
         "spacing": {
             "margin": true,

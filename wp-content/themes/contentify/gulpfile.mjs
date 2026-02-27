@@ -25,7 +25,7 @@ const js_src = ['./js/**/*.js'];
 function buildStylesDev() {
     return gulp.src(scss_src)
         .pipe(sass({
-            silenceDeprecations: ['legacy-js-api'],
+            silenceDeprecations: ['legacy-js-api', 'import'],
         }).on('error', sass.logError))
         .pipe(gulp.dest(dist_folder));
 }
@@ -36,7 +36,7 @@ function buildStylesProd() {
     ];
     return gulp.src(scss_src)
         .pipe(sass({
-            silenceDeprecations: ['legacy-js-api'],
+            silenceDeprecations: ['legacy-js-api', 'import'],
         }).on('error', sass.logError))
         .pipe(postcss(processors))
         .pipe(minifyCss())

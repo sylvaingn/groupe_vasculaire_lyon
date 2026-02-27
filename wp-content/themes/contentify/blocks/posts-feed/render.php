@@ -1,4 +1,3 @@
-
 <?php
 /**
  * posts-feed block
@@ -21,10 +20,10 @@ $button_label = isset($fields['posts_feed-button_label']) && $fields['posts_feed
 
 if ($is_automatic) {
     $posts = get_posts([
-        'post_type'      => $post_type,
-        'posts_per_page' => $posts_per_page,
-        'orderby'        => 'date',
-        'order'          => 'DESC',
+            'post_type' => $post_type,
+            'posts_per_page' => $posts_per_page,
+            'orderby' => 'date',
+            'order' => 'DESC',
     ]);
 } else {
     $posts = [];
@@ -37,6 +36,9 @@ if ($is_automatic) {
         }
     }
 }
+
+if (empty($posts)) return;
+
 
 $archive_url = '';
 
@@ -58,9 +60,9 @@ if ($is_automatic) {
         </div>
 
         <?php if (!empty($posts) && is_array($posts)) : ?>
-            <div class="block--posts-feed__grid">
+            <div class="block--posts-feed__grid" data-post-type="<?php echo esc_attr($post_type); ?>">
                 <?php foreach ($posts as $post_item) :
-                    get_template_part('template-parts/cards/card-post', null, ['post_id' => $post_item->ID]);
+                    get_template_part('template-parts/cards/card', $post_type, ['post_id' => $post_item->ID]);
                 endforeach; ?>
             </div>
         <?php endif; ?>

@@ -6,11 +6,11 @@ $breakpoint-xl: 1520px;
 
 %hidden-link {
 	text-decoration: none;
-	color: inherit;
+	color: inherit !important;
 
 	&:hover {
 		text-decoration: none;
-		color: inherit;
+		color: inherit !important;
 	}
 }
 
