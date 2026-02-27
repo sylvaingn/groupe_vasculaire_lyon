@@ -40,7 +40,7 @@
 }
 
 
-.tag{
+.tag {
 	display: inline-block;
 	padding: 0.57em 1.24em;
 	border-radius: 50px;
@@ -49,7 +49,7 @@
 	color: var(--color-primary);
 	font-weight: 600;
 
-	&.tag-secondary{
+	&.tag-secondary {
 		background-color: var(--color-secondary-light);
 		color: var(--color-secondary);
 	}

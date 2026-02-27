@@ -1,0 +1,66 @@
+@use '../../inc/variables' as *;
+
+.card-post {
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	transition: box-shadow 0.3s ease;
+
+	&:hover {
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+	}
+
+	a{
+		@extend %hidden-link;
+	}
+
+	.card-post__image {
+		position: relative;
+		aspect-ratio: 413/321;
+		overflow: hidden;
+
+		.card-post__img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+	}
+
+	&:hover .card-post__img {
+		transform: scale(1.05);
+	}
+
+	.card-post__content {
+		padding: 1.25rem;
+		margin-top: 1.8rem;
+
+		.card-post__title {
+			margin-bottom: 0.875rem;
+		}
+
+		.card-post__excerpt {
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			margin: 0;
+			color: #666;
+			font-size: 16px;
+			line-height: 1.5em;
+		}
+
+		.card-post__read-more {
+			display: inline-block;
+			margin-top: 1.75rem;
+
+		}
+
+	}
+}

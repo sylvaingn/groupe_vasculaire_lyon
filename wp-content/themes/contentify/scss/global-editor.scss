@@ -1,0 +1,19 @@
+// Styles de l'éditeur - scopé dans .is-root-container
+// On utilise @import car @use ne peut pas être imbriqué dans un sélecteur
+
+// Variables en global (nécessaires pour :root)
+@use 'inc/variables' as *;
+
+.is-root-container,
+.editor-styles-wrapper {
+  //@import 'inc/reset';
+  @import 'inc/general';
+  @import 'inc/header';
+  //@import 'inc/footer';
+  @import 'inc/components/buttons';
+  @import 'inc/components/titles';
+  @import './inc/components/card-post';
+
+  //@import 'inc/components/forms';
+  //@import 'inc/components/pagination';
+}

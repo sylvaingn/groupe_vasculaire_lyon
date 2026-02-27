@@ -1,0 +1,98 @@
+@use '../../inc/variables' as *;
+
+.block--specialities-list {
+	--schema-width: clamp(1em, 35vw, 454px);
+	padding: 4em 0;
+
+	.block--specialities-list__schema {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: var(--schema-width);
+		height: 100%;
+
+		img {
+			display: block;
+			width: 63%;
+			height: 100%;
+			object-fit: contain;
+			margin: 0 auto;
+		}
+
+		@media screen and (max-width: $breakpoint-md) {
+			display: none;
+		}
+	}
+
+	.block--specialities-list__grid {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1em var(--schema-width);
+		margin-top: 4rem;
+
+		@media screen and (max-width: $breakpoint-md) {
+			gap: 1em;
+		}
+	}
+
+	.block--specialities-list__card {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.5rem;
+		padding: 1.5rem 1.5625rem;
+		background: rgba(#D5E2FF, 0.35);
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+		transition: box-shadow 0.3s ease;
+
+		&:hover {
+			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	.block--specialities-list__card-icon {
+		flex-shrink: 0;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.block--specialities-list__icon-img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+	.block--specialities-list__card-content {
+		flex: 1;
+
+		> *:not(:last-child) {
+			margin-bottom: 1.75rem;
+		}
+	}
+
+	.block--specialities-list__card-title {
+		font-size: 1.25rem;
+	}
+
+	.block--specialities-list__card-excerpt {
+		color: var(--color-gray-text);
+		font-size: 0.9rem;
+		line-height: 1.5;
+	}
+
+	.block--specialities-list__card-link {
+		display: inline-block;
+		font-weight: 600;
+		text-decoration: none;
+		color: var(--color-primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

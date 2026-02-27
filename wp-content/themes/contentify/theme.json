@@ -23,6 +23,10 @@
                     "color": "#FBEAEB",
                     "name": "Secondaire clair",
                     "slug": "secondary-light"
+                },{
+                    "color": "#565656",
+                    "name": "Gris",
+                    "slug": "gray-text"
                 },
                 {
                     "color": "#131313",
@@ -146,12 +150,12 @@
                 {
                     "name": "Titre de carte",
                     "slug": "card-title",
-                    "size": "clamp(20px, 5vw, 25px)"
+                    "size": "clamp(20px, 5vw, 24px)"
                 },
                 {
                     "name": "Titre de section - Moyen",
                     "slug": "section-title-medium",
-                    "size": "clamp(25px, 5vw, 36px)"
+                    "size": "clamp(25px, 6vw, 36px)"
                 },
                 {
                     "name": "Titre de section",
@@ -161,7 +165,7 @@
                 {
                     "name": "Titre d'en-tête",
                     "slug": "head-title",
-                    "size": "clamp(40px, 5vw, 80px)"
+                    "size": "clamp(40px, 6vw, 80px)"
                 }
             ]
         }

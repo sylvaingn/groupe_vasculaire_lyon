@@ -2,5 +2,7 @@
 @use './inc/general';
 @use './inc/header';
 
-@use './components/titles';
-@use './components/buttons';
+@use './inc/components/titles';
+@use './inc/components/buttons';
+
+@use './inc/components/card-post';

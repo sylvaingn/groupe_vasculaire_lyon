@@ -1,0 +1,52 @@
+{
+    "key": "group_speciality_fields_67c04a1b",
+    "title": "[CPT] - Spécialité",
+    "fields": [
+        {
+            "key": "field_speciality_icon",
+            "label": "Icône",
+            "name": "speciality-icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Icône représentant la spécialité (SVG ou PNG recommandé)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg,png,jpg,jpeg,webp",
+            "allow_in_bindings": 0,
+            "preview_size": "thumbnail"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "speciality"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1740646022
+}

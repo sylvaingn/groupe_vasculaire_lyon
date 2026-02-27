@@ -1,0 +1,31 @@
+@use "../../inc/variables" as *;
+
+.block--posts-feed {
+	padding: 4em 0;
+	.section-title {
+		color: var(--color-secondary);
+	}
+
+	.block--posts-feed__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		//flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 4rem;
+
+		@media screen and (max-width: $breakpoint-md) {
+			flex-wrap: wrap;
+		}
+	}
+
+	.block--posts-feed__button {
+		flex-shrink: 0;
+	}
+
+	.block--posts-feed__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		gap: 21px;
+	}
+}

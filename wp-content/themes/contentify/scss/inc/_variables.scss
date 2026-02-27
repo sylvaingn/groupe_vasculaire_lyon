@@ -1,5 +1,18 @@
-// Variables CSS - Thème Enfant (Groupe Vasculaire Lyon)
-// Ces variables écrasent celles du thème parent
+$breakpoint-xs: 576px;
+$breakpoint-sm: 740px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1279px;
+$breakpoint-xl: 1520px;
+
+%hidden-link {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+		color: inherit;
+	}
+}
 
 :root {
 	// Couleurs de base
@@ -8,6 +21,7 @@
 	--color-secondary: var(--wp--preset--color--secondary);
 	--color-secondary-light: var(--wp--preset--color--secondary-light);
 	--color-black: var(--wp--preset--color--black);
+	--color-gray-text: var(--wp--preset--color--gray-text);
 	--color-white: var(--wp--preset--color--white);
 
 	// Typographie
@@ -15,5 +29,5 @@
 	--font-family-title: var(--wp--preset--font-family--title);
 	--font-family-button: var(--wp--preset--font-family--button);
 
-
+	--container-max-width: calc(1280px + (var(--container-padding) * 2));
 }

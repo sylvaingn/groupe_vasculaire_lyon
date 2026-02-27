@@ -1,0 +1,52 @@
+.block--image-banner {
+	position: relative;
+	min-height: 500px;
+	padding: 4em 0;
+	display: flex;
+	align-items: center;
+
+	.block--image-banner__background {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+		}
+	}
+
+	.block--image-banner__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+
+	.block--image-banner__content {
+		max-width: 600px;
+		color: #fff;
+	}
+
+	.block--image-banner__description {
+		margin-top: 1rem;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.block--image-banner__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 2rem;
+	}
+}
