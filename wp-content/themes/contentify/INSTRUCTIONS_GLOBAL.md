@@ -11,3 +11,7 @@ si un groupe de champs existe déjà dans le thème parent pour un block, ne pas
 pour les boutons/liens vers des archives ou pages dynamiques, les générer directement en PHP plutôt que créer des champs ACF inutiles (ex: get_post_type_archive_link())
 
 lorsqu'il s'agit de créer des cartes de boucles, je préfère que tu utilises des get_template_part() pour plus de découpage
+
+ne pas s'embarquer dans un travail complexe sans être certain de la solution (ex: filtrage AJAX dynamique ACF dans Gutenberg). Si incertain, le dire immédiatement et proposer des alternatives simples ou demander de la documentation
+
+pour les slugs de CPT, taxonomies et variables, éviter les noms trop simples ou génériques (ex: lieu, page, post, link, image) car potentiellement utilisés par WordPress ou d'autres plugins. Préférer des noms plus spécifiques (ex: intervention_place au lieu de lieu)

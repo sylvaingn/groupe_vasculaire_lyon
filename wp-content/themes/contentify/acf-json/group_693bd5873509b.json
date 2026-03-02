@@ -62,7 +62,8 @@
             "choices": {
                 "post": "Articles",
                 "page": "Pages",
-                "chirurgien": "Chirurgien"
+                "chirurgien": "Chirurgien",
+                "intervention_place": "Lieux d'interventions"
             },
             "default_value": false,
             "return_format": "value",
@@ -157,5 +158,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1772447796
+    "modified": 1772466789
 }

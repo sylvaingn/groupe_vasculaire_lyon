@@ -9,11 +9,11 @@
 	font-weight: 500;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	background-color: var(--color-primary);
-	color: var(--color-white);
+	color: var(--color-white) !important;
 
 	&:hover {
 		background-color: var(--color-primary-light);
-		color: var(--color-primary);
+		color: var(--color-primary)!important;
 	}
 
 	// Bouton Secondary (fond secondary, texte blanc)
@@ -35,6 +35,25 @@
 		&:hover {
 			background-color: var(--color-primary);
 			color: var(--color-white);
+		}
+	}
+
+	&.btn-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.2em;
+		font-size: 1.5em;
+
+		i {
+			display: inline-block;
+			/* font-size: 1.2rem; */
+			width: 1.2em;
+			height: 1.2em;
+			line-height: 1.2rem;
+			text-align: center;
+			flex-shrink: 0;
+			color: inherit;
 		}
 	}
 }

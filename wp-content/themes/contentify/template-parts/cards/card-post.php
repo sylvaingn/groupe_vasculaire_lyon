@@ -25,7 +25,7 @@ $permalink = get_permalink($post_id);
 $date = get_the_date('', $post_id);
 ?>
 
-<article class="card-post">
+<div class="card-post">
     <?php if ($thumbnail_id) : ?>
         <div class="card-post__image">
             <?php echo wp_get_attachment_image($thumbnail_id, 'medium_large', false, ['class' => 'card-post__img']); ?>
@@ -51,4 +51,4 @@ $date = get_the_date('', $post_id);
             <?php echo __('Lire le suite', TEXT_DOMAIN); ?>
         </span>
     </div>
-</article>
+</div>

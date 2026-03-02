@@ -26,7 +26,7 @@ $gallery = get_field('chirurgien-gallery', $post_id);
 $thumbnail_id = get_post_thumbnail_id($post_id);
 ?>
 
-<article class="card-chirurgien">
+<div class="card-chirurgien">
     <div class="card-chirurgien__slider">
         <?php if (!empty($gallery) && is_array($gallery)) : ?>
             <div class="swiper card-chirurgien__swiper">
@@ -64,17 +64,20 @@ $thumbnail_id = get_post_thumbnail_id($post_id);
         <?php if ($linkedin || $doctolib) : ?>
             <div class="card-chirurgien__links">
                 <?php if ($doctolib) : ?>
-                    <a href="<?php echo esc_url($doctolib); ?>" class="card-chirurgien__link card-chirurgien__link--doctolib" target="_blank" rel="noopener noreferrer">
-                        Doctolib
+                    <a href="<?php echo esc_url($doctolib); ?>" class="btn btn-secondary" target="_blank"
+                       rel="noopener noreferrer">
+                        <?php echo __('Prendre rendez-vous', TEXT_DOMAIN); ?>
                     </a>
                 <?php endif; ?>
 
                 <?php if ($linkedin) : ?>
-                    <a href="<?php echo esc_url($linkedin); ?>" class="card-chirurgien__link card-chirurgien__link--linkedin" target="_blank" rel="noopener noreferrer">
-                        LinkedIn
+                    <a href="<?php echo esc_url($linkedin); ?>"
+                       class="btn btn-icon" target="_blank"
+                       rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
     </div>
-</article>
+</div>

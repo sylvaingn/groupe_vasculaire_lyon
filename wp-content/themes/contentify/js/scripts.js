@@ -5,17 +5,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const chirurgienSwiper = new Swiper(swiperChirurgien, {
             loop: true,
-            autoplay: {
-                delay: 1000,
-                disableOnInteraction: false,
-            },
+
             slidesPerView: 1,
             spaceBetween: 0,
             //dont allow touch move
-            allowTouchMove: false,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+            },
+            breakpoints: {
+                1024: {
+                    autoplay: {
+                        delay: 1000,
+                        disableOnInteraction: false,
+                    },
+                    allowTouchMove: false,
+                }
             },
             on: {
                 init: function () {
