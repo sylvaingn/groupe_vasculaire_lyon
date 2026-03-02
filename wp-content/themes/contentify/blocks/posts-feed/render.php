@@ -19,12 +19,21 @@ $manual_posts = isset($fields['posts_feed-posts']) && is_array($fields['posts_fe
 $button_label = isset($fields['posts_feed-button_label']) && $fields['posts_feed-button_label'] ? $fields['posts_feed-button_label'] : 'Voir tout';
 
 if ($is_automatic) {
-    $posts = get_posts([
+    $args = [
             'post_type' => $post_type,
-            'posts_per_page' => $posts_per_page,
-            'orderby' => 'date',
-            'order' => 'DESC',
-    ]);
+            'posts_per_page' => $posts_per_page
+    ];
+
+    if ($post_type === "chirurgien") {
+        $args['orderby'] = 'title';
+        $args['order'] = 'ASC';
+    } else {
+        $args['orderby'] = 'date';
+        $args['order'] = 'DESC';
+    }
+
+    $posts = get_posts($args);
+
 } else {
     $posts = [];
     if (!empty($manual_posts)) {
