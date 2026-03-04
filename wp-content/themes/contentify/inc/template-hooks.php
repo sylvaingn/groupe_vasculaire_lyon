@@ -3,12 +3,23 @@ defined('ABSPATH') || exit;
 
 // Header
 add_action('contentify_parent_header_content', function () {
+    $doctolib_link = get_field('doctolib_global_link', 'option');
     ?>
     <div class="container">
-        <a href="<?php echo esc_url(home_url()); ?>" class="site-logo">
-            <img src="<?php echo esc_url(contentify_parent_get_custom_logo_url()); ?>" alt="">
-        </a>
-        <?php wp_nav_menu(['theme_location' => 'menu-primary']); ?>
+        <div class="masthead--wrapper">
+            <a href="<?php echo esc_url(home_url()); ?>" class="site-logo">
+                <img src="<?php echo esc_url(contentify_parent_get_custom_logo_url()); ?>" alt="">
+            </a>
+            <div class="masthead--nav">
+                <?php wp_nav_menu(['theme_location' => 'menu-primary', 'container_class' => 'menu-primary-desktop--container','menu_class' => 'menu menu-primary-desktop']); ?>
+                <?php if ($doctolib_link): ?>
+                    <a href="<?php echo esc_url($doctolib_link); ?>" class="btn btn-primary" target="_blank"
+                       rel="noopener">
+                        <?php echo __('Rendez-vous sur Doctissimo', TEXT_DOMAIN); ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
     <?php
 });

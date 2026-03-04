@@ -1,0 +1,57 @@
+#masthead {
+	position: relative;
+	z-index: 100;
+	padding: 1rem 0;
+
+	.masthead--wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
+	.masthead--nav {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+}
+
+.menu-primary-desktop {
+	a {
+		padding: .5rem;
+	}
+
+	> li.menu-item {
+		text-align: center;
+
+		&.menu-item-has-children {
+			position: relative;
+
+			.sub-menu {
+				position: absolute;
+				bottom: 0;
+				left: -1rem;
+				transform: translateY(100%);
+				//width: 100%;
+				background: var(--color-white);
+				box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+				padding-left: 0;
+				list-style: none;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease, visibility 0.3s ease;
+				text-align: left;
+
+				a {
+					padding: 0.7rem 1.5rem;
+				}
+			}
+
+			&:hover .sub-menu {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

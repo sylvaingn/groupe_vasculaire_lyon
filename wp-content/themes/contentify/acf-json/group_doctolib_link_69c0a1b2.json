@@ -1,0 +1,42 @@
+{
+    "key": "group_doctolib_link_69c0a1b2",
+    "title": "[OPTIONS] - Lien Doctolib",
+    "fields": [
+        {
+            "key": "field_doctolib_global_link",
+            "label": "Lien Doctolib de la clinique",
+            "name": "doctolib_global_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Renseignez le lien global de la clinique sur Doctolib",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://www.doctolib.fr/..."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "options-site"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1772466789
+}

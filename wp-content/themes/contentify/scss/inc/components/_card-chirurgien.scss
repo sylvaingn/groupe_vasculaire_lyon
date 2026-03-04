@@ -2,6 +2,7 @@
 
 .card-chirurgien {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 2rem;
 	background: #fff;
 	border-radius: 8px;
@@ -11,6 +12,7 @@
 
 	.card-chirurgien__slider {
 		aspect-ratio: 287/406;
+		width: 100%;
 
 		@media screen and (min-width: $breakpoint-md) {
 			width: 287px;
