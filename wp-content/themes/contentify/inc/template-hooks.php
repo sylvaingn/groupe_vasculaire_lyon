@@ -11,16 +11,32 @@ add_action('contentify_parent_header_content', function () {
                 <img src="<?php echo esc_url(contentify_parent_get_custom_logo_url()); ?>" alt="">
             </a>
             <div class="masthead--nav">
-                <?php wp_nav_menu(['theme_location' => 'menu-primary', 'container_class' => 'menu-primary-desktop--container','menu_class' => 'menu menu-primary-desktop']); ?>
+                <?php wp_nav_menu(['theme_location' => 'menu-primary', 'container_class' => 'menu-primary-desktop--container', 'menu_class' => 'menu menu-primary-desktop']); ?>
                 <?php if ($doctolib_link): ?>
                     <a href="<?php echo esc_url($doctolib_link); ?>" class="btn btn-primary" target="_blank"
                        rel="noopener">
                         <?php echo __('Rendez-vous sur Doctissimo', TEXT_DOMAIN); ?>
                     </a>
                 <?php endif; ?>
+                <div class="container-burger">
+                    <div class="burger" aria-label="Menu" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <?php
+});
+
+// Menu mobile (après le header)
+add_action('contentify_parent_after_header', function () {
+    ?>
+    <nav class="menu-mobile" aria-hidden="true">
+        <div class="container">
+            <?php wp_nav_menu(['theme_location' => 'menu-primary', 'container' => false, 'menu_class' => 'menu menu-mobile__list']); ?>
+        </div>
+    </nav>
     <?php
 });
 
