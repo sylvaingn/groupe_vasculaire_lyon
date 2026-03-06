@@ -67,6 +67,9 @@
 
 .tag {
 	display: inline-block;
+	width: fit-content;
+	max-width: 100%;
+	text-align: center;
 	padding: 0.57em 1.24em;
 	border-radius: 50px;
 	font-size: var(--wp--preset--font-size--small-text);

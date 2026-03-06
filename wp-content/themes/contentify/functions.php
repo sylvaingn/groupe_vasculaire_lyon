@@ -13,3 +13,4 @@ add_filter('contentify_parent_block_namespace', fn() => 'contentify');
 // Charger les fichiers du thème enfant
 require_once get_stylesheet_directory() . '/inc/template-hooks.php';
 require_once get_stylesheet_directory() . '/inc/scripts-child.php';
+require_once get_stylesheet_directory() . '/inc/cpt-speciality.php';

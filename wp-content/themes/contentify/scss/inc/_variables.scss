@@ -30,4 +30,6 @@ $breakpoint-xl: 1520px;
 	--font-family-button: var(--wp--preset--font-family--button);
 
 	--container-max-width: calc(1280px + (var(--container-padding) * 2));
+
+	--padding-negative: calc((100vw - 100% - var(--scrollbar-width)) / -2);
 }

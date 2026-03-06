@@ -50,7 +50,7 @@ $link = $fields['important_message-link'] ?? null;
             <?php if ($link): ?>
                 <div class="block--important-message__right">
                     <a href="<?php echo esc_url($link['url']); ?>" 
-                       class="btn btn-primary"
+                       class="btn btn-secondary"
                        <?php echo !empty($link['target']) ? 'target="' . esc_attr($link['target']) . '" rel="noopener"' : ''; ?>>
                         <?php echo esc_html($link['title']); ?>
                     </a>

@@ -13,7 +13,7 @@ function scripts_contentify()
         wp_enqueue_style('contentify-single-speciality', DIST_URL . '/single-speciality.css', array('contentify-style'), time());
     }
 
-    if (is_page() && is_page_template('page.php')) {
+    if (is_page()) {
         wp_enqueue_style('contentify-page', DIST_URL . '/page.css', array('contentify-style'), time());
     }
 
