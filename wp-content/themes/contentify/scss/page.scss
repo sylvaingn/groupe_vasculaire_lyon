@@ -1,0 +1,66 @@
+@use "./inc/variables" as *;
+
+.page-banner {
+	position: relative;
+	z-index: 0;
+	background-color: var(--color-primary-light);
+	color: var(--color-white);
+	padding: 4em 0;
+	
+	#breadcrumbs a {
+		color: var(--color-secondary);
+	}
+
+	.page-banner__background {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba(0, 43, 141, 1) 0%, rgba(0, 43, 141, 0.7) 50%, rgba(0, 43, 141, 0.4) 100%);
+		}
+	}
+
+	.page-banner__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1rem;
+		max-width: 672px;
+	}
+
+	.page-banner__title {
+		margin: 0;
+	}
+
+	.page-banner__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 0.5rem;
+	}
+}
+
+.page-content {
+	padding: 3em 0;
+
+	@media screen and (max-width: $breakpoint-md) {
+		padding: 2em 0;
+	}
+}

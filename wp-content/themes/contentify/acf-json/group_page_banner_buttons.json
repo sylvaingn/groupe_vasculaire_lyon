@@ -1,0 +1,94 @@
+{
+    "key": "group_page_banner_buttons",
+    "title": "Bannière de page",
+    "fields": [
+        {
+            "key": "field_page_banner_buttons",
+            "label": "Boutons",
+            "name": "page_banner_buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Ajoutez un ou plusieurs boutons à afficher dans la bannière de la page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 5,
+            "collapsed": "",
+            "button_label": "Ajouter un bouton",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_page_banner_button_link",
+                    "label": "Lien",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "70",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_page_banner_buttons"
+                },
+                {
+                    "key": "field_page_banner_button_style",
+                    "label": "Style",
+                    "name": "style",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primaire",
+                        "secondary": "Secondaire",
+                        "outline": "Outline"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_page_banner_buttons"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1741257375
+}
