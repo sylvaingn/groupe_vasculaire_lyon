@@ -1,0 +1,1 @@
+prend en considération toutes les instructions du thème parent (contentify-parent)
