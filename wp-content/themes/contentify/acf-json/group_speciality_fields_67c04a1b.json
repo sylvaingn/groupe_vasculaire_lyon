@@ -27,6 +27,36 @@
             "mime_types": "svg,png,jpg,jpeg,webp",
             "allow_in_bindings": 0,
             "preview_size": "thumbnail"
+        },
+        {
+            "key": "field_speciality_zones",
+            "label": "Zones du schéma",
+            "name": "speciality-zones",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Sélectionnez les zones du corps correspondant à cette spécialité",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "jambe": "Jambe",
+                "avant-bras": "Avant-bras",
+                "pubien": "Pubien",
+                "epaule": "Épaule",
+                "aorte": "Aorte",
+                "carotide": "Carotide"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_null": 1,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": "Sélectionner les zones"
         }
     ],
     "location": [
@@ -48,5 +78,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1740646022
+    "modified": 1741769341
 }

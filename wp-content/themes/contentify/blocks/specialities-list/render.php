@@ -27,16 +27,17 @@ $specialities = get_posts([
         <?php if (!empty($specialities) && is_array($specialities)) : ?>
             <div class="block--specialities-list__grid">
                 <div class="block--specialities-list__schema">
-                    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/speciality_schema.svg' ?>"
-                         alt="Schéma des spécialités" class="block--specialities-list__schema-img">
+                    <?php echo file_get_contents(get_stylesheet_directory() . '/assets/img/speciality_schema.svg'); ?>
                 </div>
                 <?php foreach ($specialities as $speciality) :
                     $icon_id = get_field('speciality-icon', $speciality->ID);
                     $title = get_the_title($speciality->ID);
                     $excerpt = get_the_excerpt($speciality->ID);
                     $permalink = get_permalink($speciality->ID);
+                    $zones = get_field('speciality-zones', $speciality->ID);
+                    $zones_data = !empty($zones) && is_array($zones) ? implode(',', $zones) : '';
                     ?>
-                    <div class="block--specialities-list__card">
+                    <div class="block--specialities-list__card" data-zones="<?php echo esc_attr($zones_data); ?>">
                         <?php if ($icon_id) : ?>
                             <div class="block--specialities-list__card-icon">
                                 <?php echo wp_get_attachment_image($icon_id, 'thumbnail', false, ['class' => 'block--specialities-list__icon-img']); ?>

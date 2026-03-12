@@ -10,6 +10,11 @@
                     "slug": "primary"
                 },
                 {
+                    "color": "#010C25",
+                    "name": "Primaire sombre",
+                    "slug": "primary-dark"
+                },
+                {
                     "color": "#D5E2FF",
                     "name": "Primaire clair",
                     "slug": "primary-light"

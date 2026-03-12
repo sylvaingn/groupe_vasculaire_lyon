@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-.btn {
+.btn, button[type=submit], input[type=submit] {
 	display: inline-block;
 	padding: 1em 1.4375em;
 	border-radius: 50px;

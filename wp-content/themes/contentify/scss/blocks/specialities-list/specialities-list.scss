@@ -12,12 +12,21 @@
 		width: var(--schema-width);
 		height: 100%;
 
-		img {
+		svg {
 			display: block;
 			width: 63%;
 			height: 100%;
 			object-fit: contain;
 			margin: 0 auto;
+		}
+
+		.zone-schema {
+			transition: fill 0.3s var(--cubic-transition), opacity 0.3s var(--cubic-transition);
+		}
+
+		.zone-schema--active {
+			fill: var(--color-primary, #3b82f6) !important;
+			opacity: 0.3;
 		}
 
 		@media screen and (max-width: $breakpoint-md) {
@@ -45,10 +54,12 @@
 		background: rgba(#D5E2FF, 0.35);
 		border-radius: 8px;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-		transition: box-shadow 0.3s ease;
+		transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
-		&:hover {
+		&:hover,
+		&--active {
 			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+			background-color: var(--color-primary-light);
 		}
 	}
 

@@ -1,0 +1,86 @@
+
+<?php
+/**
+ * contact block
+ *
+ * @package ContentifyParent
+ * @since 1.0.0
+ */
+
+use ContentifyParent\Blocks\SingleBlock;
+
+/** @var array $block */
+$block_obj = new SingleBlock($block);
+$fields = $block_obj->get_block_fields();
+
+$secretariat_phone = get_field('contacts_secretariat_phone', 'option');
+$secretariat_email = get_field('contacts_secretariat_email', 'option');
+$centers = get_field('contacts_centers', 'option');
+?>
+
+<div <?php echo $block_obj->body_block('block--contact'); ?>>
+    <div class="container">
+        <div class="block--contact--wrapper">
+            <div class="block--contact__infos">
+                <?php echo $block_obj->get_block_title(); ?>
+
+                <?php if ($secretariat_phone || $secretariat_email) : ?>
+                    <div class="block--contact__secretariat">
+                        <h3 class="block--contact__subtitle"><?php _e('Secrétariat', TEXT_DOMAIN); ?></h3>
+                        <?php if ($secretariat_phone) : ?>
+                            <p class="block--contact__item">
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $secretariat_phone)); ?>">
+                                    <?php echo esc_html($secretariat_phone); ?>
+                                </a>
+                            </p>
+                        <?php endif; ?>
+                        <?php if ($secretariat_email) : ?>
+                            <p class="block--contact__item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:<?php echo esc_attr($secretariat_email); ?>">
+                                    <?php echo esc_html($secretariat_email); ?>
+                                </a>
+                            </p>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (!empty($centers) && is_array($centers)) : ?>
+                    <div class="block--contact__centers">
+                        <h3 class="block--contact__subtitle"><?php _e('Nos centres', TEXT_DOMAIN); ?></h3>
+                        <?php foreach ($centers as $center) : 
+                            $name = $center['center_name'] ?? '';
+                            $address = $center['center_address'] ?? '';
+                            $phone = $center['center_phone'] ?? '';
+                        ?>
+                            <div class="block--contact__center">
+                                <?php if ($name) : ?>
+                                    <h4 class="block--contact__center-name"><?php echo esc_html($name); ?></h4>
+                                <?php endif; ?>
+                                <?php if ($address) : ?>
+                                    <p class="block--contact__item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span><?php echo $address; ?></span>
+                                    </p>
+                                <?php endif; ?>
+                                <?php if ($phone) : ?>
+                                    <p class="block--contact__item">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <a href="tel:<?php echo esc_attr(preg_replace('/\s+/', '', $phone)); ?>">
+                                            <?php echo esc_html($phone); ?>
+                                        </a>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <div class="block--contact__map">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/carte.png" alt="<?php _e('Carte', TEXT_DOMAIN); ?>" class="block--contact__map-image">
+            </div>
+        </div>
+    </div>
+</div>

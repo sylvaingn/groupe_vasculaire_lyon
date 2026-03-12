@@ -10,6 +10,12 @@ add_filter('contentify_parent_block_category_slug', fn() => 'contentify-blocks')
 add_filter('contentify_parent_block_category_title', fn() => 'Blocs Contentify');
 add_filter('contentify_parent_block_namespace', fn() => 'contentify');
 
+// Ajouter les menus footer
+add_filter('contentify_parent_nav_menus', function ($menus) {
+    $menus['menu-footer-2'] = __('Menu Footer 2', TEXT_DOMAIN);
+    return $menus;
+});
+
 // Charger les fichiers du thème enfant
 require_once get_stylesheet_directory() . '/inc/template-hooks.php';
 require_once get_stylesheet_directory() . '/inc/scripts-child.php';

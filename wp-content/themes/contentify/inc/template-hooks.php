@@ -42,9 +42,43 @@ add_action('contentify_parent_after_header', function () {
 
 // Footer
 add_action('contentify_parent_footer_content', function () {
+    $menus = [
+            'menu-footer',
+            'menu-footer-2'
+    ];
     ?>
     <div class="container">
-        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+        <div class="footer--wrapper">
+            <div class="footer__col footer__col--logo">
+                <a href="<?php echo esc_url(home_url()); ?>" class="footer__logo">
+                    <img src="<?php echo esc_url(contentify_parent_get_custom_logo_url()); ?>"
+                         alt="<?php bloginfo('name'); ?>">
+                </a>
+            </div>
+
+            <?php foreach ($menus as $menu):
+                if (!has_nav_menu($menu)) {
+                    continue;
+                }
+              
+                $menu_object = wp_get_nav_menu_object(get_nav_menu_locations()[$menu] ?? 0);
+                ?>
+                <div class="footer__col footer__col--menu">
+                    <div class="footer__title title"><?php echo esc_html($menu_object->name); ?></div>
+                    <?php wp_nav_menu([
+                            'theme_location' => $menu,
+                            'container' => false,
+                            'menu_class' => 'menu menu-footer',
+                            'depth' => 1
+                    ]); ?>
+                </div>
+            <?php endforeach; ?>
+
+            <div class="footer__col footer__col--newsletter">
+                <div class="footer__title title"><?php _e('Newsletter', TEXT_DOMAIN); ?></div>
+                <?php echo do_shortcode('[contact-form-7 id="c966573"]'); ?>
+            </div>
+        </div>
     </div>
     <?php
 });

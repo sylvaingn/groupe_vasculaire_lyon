@@ -17,6 +17,7 @@ $breakpoint-xl: 1520px;
 :root {
 	// Couleurs de base
 	--color-primary: var(--wp--preset--color--primary);
+	--color-primary-dark: var(--wp--preset--color--primary-dark);
 	--color-primary-light: var(--wp--preset--color--primary-light);
 	--color-secondary: var(--wp--preset--color--secondary);
 	--color-secondary-light: var(--wp--preset--color--secondary-light);
@@ -32,4 +33,6 @@ $breakpoint-xl: 1520px;
 	--container-max-width: calc(1280px + (var(--container-padding) * 2));
 
 	--padding-negative: calc((100vw - 100% - var(--scrollbar-width)) / -2);
+
+	--wpcf7-spinner-background-color: rgba(1, 12, 37, 0.5);
 }

@@ -1,0 +1,22 @@
+@use "../variables" as *;
+
+.wpcf7 {
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="number"],
+	input[type="search"],
+	input[type="date"],
+	textarea,
+	select {
+		border-radius: 50vw;
+	}
+
+	.btn, button[type=submit], input[type=submit] {
+		margin-top: 1em;
+		width: 100%;
+	}
+
+}

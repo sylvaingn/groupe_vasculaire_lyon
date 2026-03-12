@@ -31,9 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const chirurgienSwiper = new Swiper(swiperChirurgien, {
             loop: true,
-
+            autoplay:{
+                disableOnInteraction:true
+            },
             slidesPerView: 1,
             spaceBetween: 0,
+            allowTouchMove: true,
             //dont allow touch move
             pagination: {
                 el: '.swiper-pagination',
