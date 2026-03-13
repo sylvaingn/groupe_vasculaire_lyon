@@ -36,11 +36,11 @@
 	// Bouton Outline (fond blanc, texte primary)
 	&.btn-white {
 		background-color: var(--color-white);
-		color: var(--color-primary);
+		color: var(--color-primary) !important;
 
 		&:hover {
 			background-color: var(--color-primary);
-			color: var(--color-white);
+			color: var(--color-white) !important;
 		}
 	}
 

@@ -1,6 +1,6 @@
 {
     "name": "contentify-parent/cta-banner",
-    "title": "cta-banner",
+    "title": "Bannière d'appel à l'action",
     "description": "",
     "style": "block-cta-banner",
     "editorStyle": "block-cta-banner",
@@ -16,8 +16,8 @@
         "align": false,
         "anchor": true,
         "color": {
-            "text": false,
-            "background": false
+            "text": true,
+            "background": true
         },
         "spacing": {
             "margin": true,
