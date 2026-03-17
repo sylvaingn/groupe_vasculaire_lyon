@@ -1,4 +1,3 @@
-
 <?php
 /**
  * image-text block
@@ -31,7 +30,7 @@ if ($image_contain) {
 
 <div <?php echo $block_obj->body_block($block_classes); ?>>
     <div class="container">
-        <div class="block--image-text--wrapper">
+        <div class="block--image-text--wrapper <?php echo $image_id ? '' : 'one-col'; ?>">
             <div class="block--image-text__content">
                 <?php if ($surtitle): ?>
                     <div class="tag"><?php echo esc_html($surtitle); ?></div>
@@ -53,10 +52,10 @@ if ($image_contain) {
 
                         <?php if (!empty($additional_info_entries) && is_array($additional_info_entries)): ?>
                             <ul class="block--image-text__entries">
-                                <?php foreach ($additional_info_entries as $entry): 
+                                <?php foreach ($additional_info_entries as $entry):
                                     $entry_title = $entry['entry_title'] ?? '';
                                     $entry_text = $entry['entry_text'] ?? '';
-                                ?>
+                                    ?>
                                     <li class="block--image-text__entry">
                                         <?php if ($entry_title): ?>
                                             <strong class="block--image-text__entry-title"><?php echo esc_html($entry_title); ?></strong>

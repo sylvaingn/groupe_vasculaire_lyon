@@ -9,6 +9,10 @@
 		gap: 3em;
 		align-items: center;
 
+		&.one-col {
+			grid-template-columns: 1fr;
+		}
+
 		@media screen and (max-width: $breakpoint-md) {
 			grid-template-columns: 1fr;
 			gap: 2em;
@@ -117,11 +121,11 @@
 
 	// Modificateur : image à gauche
 	&.block--image-text--image-left {
-		.block--image-text--wrapper {
-			@media screen and (min-width: $breakpoint-md) {
-				grid-template-columns: 1fr 1fr;
-			}
-		}
+		//.block--image-text--wrapper {
+		//	@media screen and (min-width: $breakpoint-md) {
+		//		grid-template-columns: 1fr 1fr;
+		//	}
+		//}
 
 		.block--image-text__image-wrapper {
 			order: -1;

@@ -26,11 +26,9 @@ $date = get_the_date('', $post_id);
 ?>
 
 <div class="card-post">
-    <?php if ($thumbnail_id) : ?>
-        <div class="card-post__image">
-            <?php echo wp_get_attachment_image($thumbnail_id, 'medium_large', false, ['class' => 'card-post__img']); ?>
-        </div>
-    <?php endif; ?>
+    <div class="card-post__image">
+        <?php echo wp_get_attachment_image($thumbnail_id, 'medium_large', false, ['class' => 'card-post__img']); ?>
+    </div>
 
     <div class="card-post__content">
         <?php if ($title) : ?>
@@ -48,7 +46,7 @@ $date = get_the_date('', $post_id);
         <?php endif; ?>
 
         <span class="card-post__read-more">
-            <?php echo __('Lire le suite', TEXT_DOMAIN); ?>
+            <?php echo __('Lire la suite', TEXT_DOMAIN); ?>
         </span>
     </div>
 </div>
