@@ -29,7 +29,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		gap: 21px;
 
-		&[data-post-type="chirurgien"] {
+		&[data-post-type="chirurgien"], &[data-post-type="intervention_place"] {
 			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
 			@media screen and (min-width:$breakpoint-md){
