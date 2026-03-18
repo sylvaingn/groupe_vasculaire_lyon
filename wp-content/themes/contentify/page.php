@@ -28,7 +28,7 @@ $buttons = get_field('page_banner_buttons');
                                 ?>
                                 <a href="<?php echo esc_url($link['url']); ?>"
                                    class="btn btn-<?php echo esc_attr($style); ?>"
-                                        <?php echo !empty($link['target']) ? 'target="' . esc_attr($link['target']) . '" rel="noopener"' : ''; ?>>
+                                    <?php echo !empty($link['target']) ? 'target="' . esc_attr($link['target']) . '" rel="noopener"' : ''; ?>>
                                     <?php echo esc_html($link['title']); ?>
                                 </a>
                             <?php endif; endforeach; ?>
@@ -38,10 +38,6 @@ $buttons = get_field('page_banner_buttons');
         </div>
     </section>
 
-    <div class="page-content">
-        <div class="container">
-            <?php the_content(); ?>
-        </div>
-    </div>
+        <?php the_content(); ?>
 
 <?php get_footer();

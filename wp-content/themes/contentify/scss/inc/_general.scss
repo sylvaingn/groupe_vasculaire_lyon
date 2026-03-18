@@ -2,14 +2,17 @@
 	text-align: center;
 }
 
-.container-small{
+.container-small {
 	max-width: var(--container-small);
 }
 
-#content > .container > .contentify-parent-block {
-	margin-left: var(--padding-negative);
-	margin-right: var(--padding-negative);
+#content {
+	> .container > .contentify-parent-block {
+		margin-left: var(--padding-negative);
+		margin-right: var(--padding-negative);
+	}
 }
+
 
 .top-page {
 	position: relative;

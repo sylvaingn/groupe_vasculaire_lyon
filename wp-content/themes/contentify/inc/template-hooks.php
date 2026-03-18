@@ -1,6 +1,14 @@
 <?php
 defined('ABSPATH') || exit;
 
+
+add_action('contentify_parent_after_content_open', function () {
+        echo '<div class="container">';
+});
+
+add_action('contentify_parent_before_content_closed', function () {
+        echo '</div>';
+});
 // Header
 add_action('contentify_parent_header_content', function () {
     $doctolib_link = get_field('doctolib_global_link', 'option');

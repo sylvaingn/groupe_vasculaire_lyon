@@ -21,8 +21,6 @@ $doctolib_link = get_field('doctolib_global_link', 'option');
     </div>
 </section>
 
-<div class="container">
     <?php the_content(); ?>
-</div>
 
 <?php get_footer(); ?>
