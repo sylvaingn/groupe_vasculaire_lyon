@@ -23,7 +23,7 @@ add_action('contentify_parent_header_content', function () {
                 <?php if ($doctolib_link): ?>
                     <a href="<?php echo esc_url($doctolib_link); ?>" class="btn btn-primary" target="_blank"
                        rel="noopener">
-                        <?php echo __('Rendez-vous sur Doctissimo', TEXT_DOMAIN); ?>
+                        <?php echo __('Rendez-vous sur Doctolib', TEXT_DOMAIN); ?>
                     </a>
                 <?php endif; ?>
                 <div class="container-burger">

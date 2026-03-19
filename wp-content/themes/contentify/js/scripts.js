@@ -24,6 +24,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Fixed header on scroll
+    const masthead = document.querySelector('#masthead');
+    if (masthead) {
+        ScrollTrigger.create({
+            trigger: masthead,
+            start: 'bottom top',
+            end: '+=100%',
+            onEnter: () => {
+                masthead.classList.add('fixed');
+                document.body.style.paddingTop = masthead.offsetHeight + 'px';
+            },
+            onLeaveBack: () => {
+                masthead.classList.remove('fixed');
+                document.body.style.paddingTop = '0';
+            }
+        });
+    }
+
     // Card chirurgiens swiper
     const cardChirurgiens = document.querySelectorAll('.card-chirurgien');
     cardChirurgiens?.forEach((card) => {

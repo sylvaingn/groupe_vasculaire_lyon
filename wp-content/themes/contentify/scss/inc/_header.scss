@@ -1,9 +1,27 @@
 @use './variables' as *;
 
+@keyframes appears {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
 #masthead {
 	position: relative;
 	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
 	padding: 1rem 0;
+	background-color: var(--color-white);
+
+	&.fixed {
+		position: fixed;
+		animation: appears 0.5s var(--cubic-transition) forwards;
+	}
 
 	.masthead--wrapper {
 		display: flex;

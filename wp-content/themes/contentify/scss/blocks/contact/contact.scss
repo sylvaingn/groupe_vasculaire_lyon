@@ -7,6 +7,15 @@
 		padding: 1.6em var(--container-padding);
 		border-radius: 8px;
 		background-color: rgba(255, 255, 255, 0.05);
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	.card-title {
+		font-weight: 600;
+	}
+
+	.block--contact__center-name, .block--contact__subtitle {
+		color: var(--color, var(--color-primary));
 	}
 
 	.centers--wrapper {
@@ -46,6 +55,7 @@
 			i {
 				//color: var(--color-primary);
 				margin-top: 0.25rem;
+				color: var(--color, var(--color-secondary));
 			}
 
 			a {
@@ -61,9 +71,9 @@
 		.block--contact__centers {
 			.block--contact__center {
 				.block--contact__center-name {
-					font-size: 1rem;
-					font-weight: 600;
-					margin-bottom: 0.5rem;
+					font-size: 1.2rem;
+					/* font-weight: 600; */
+					margin-bottom: 1.3rem;
 				}
 			}
 		}
