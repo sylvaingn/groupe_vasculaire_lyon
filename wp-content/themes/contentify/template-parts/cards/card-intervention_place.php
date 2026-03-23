@@ -21,7 +21,7 @@ if (!$post_id) {
 $title = get_the_title($post_id);
 $content = get_the_content(null, false, $post_id);
 $thumbnail_id = get_post_thumbnail_id($post_id);
-$permalink = get_permalink($post_id);
+$maps_url = get_field('intervention_place-maps_url', $post_id);
 ?>
 
 <div class="card-intervention-place">
@@ -44,10 +44,10 @@ $permalink = get_permalink($post_id);
             </div>
         <?php endif; ?>
 
-        <?php if ($permalink) : ?>
-            <span class="card-intervention-place__link">
+        <?php if ($maps_url) : ?>
+            <a href="<?php echo esc_url($maps_url); ?>" class="card-intervention-place__link" target="_blank" rel="noopener noreferrer">
                 <?php echo __('Voir le plan', TEXT_DOMAIN); ?>
-            </span>
+            </a>
         <?php endif; ?>
     </div>
 </div>

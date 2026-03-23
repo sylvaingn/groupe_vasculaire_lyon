@@ -1,0 +1,42 @@
+{
+    "key": "group_intervention_place_fields",
+    "title": "Lieu d'intervention - Champs",
+    "fields": [
+        {
+            "key": "field_intervention_place_maps_url",
+            "label": "Lien Google Maps",
+            "name": "intervention_place-maps_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Collez ici le lien Google Maps du lieu (ex: https://maps.google.com/...)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://maps.google.com/..."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "intervention_place"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1774364497
+}

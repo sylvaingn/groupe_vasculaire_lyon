@@ -31,9 +31,14 @@ $thumbnail_id = get_post_thumbnail_id($post_id);
         <?php if (!empty($gallery) && is_array($gallery)) : ?>
             <div class="swiper card-chirurgien__swiper">
                 <div class="swiper-wrapper">
-                    <?php foreach ($gallery as $image_id) : ?>
+                    <?php foreach ($gallery as $image_id) :
+                        $img_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+                        ?>
                         <div class="swiper-slide">
                             <?php echo wp_get_attachment_image($image_id, 'medium_large', false, ['class' => 'card-chirurgien__img']); ?>
+                            <?php if ($img_alt) : ?>
+                                <span class="card-chirurgien__alt"><?php echo esc_html($img_alt); ?></span>
+                            <?php endif; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
