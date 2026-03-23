@@ -29,6 +29,11 @@
 		gap: 21px;
 		grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 
+		> * {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+
 		@media screen and (min-width: $breakpoint-md) {
 			grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 		}

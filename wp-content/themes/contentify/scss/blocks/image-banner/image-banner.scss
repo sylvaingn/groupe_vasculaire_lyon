@@ -33,6 +33,13 @@
 	.block--image-banner__content {
 		max-width: 950px;
 		color: #fff;
+
+		.head-title,
+		.block--image-banner__description,
+		.block--image-banner__buttons {
+			opacity: 0;
+			transform: translateY(30px);
+		}
 	}
 
 	.block--image-banner__description {

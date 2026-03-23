@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Animation d'apparition des cards
+    const blocks = document.querySelectorAll('.block--specialities-list:not(.is-editing)');
+    
+    blocks.forEach(block => {
+        const cards = block.querySelectorAll('.block--specialities-list__card');
+        if (!cards.length) return;
+        
+        gsap.to(cards, {
+            opacity: 1,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.08,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: block.querySelector('.block--specialities-list__grid'),
+                start: 'top 85%',
+                once: true
+            }
+        });
+    });
+
+    // Interaction hover zones/cartes
     const cards = document.querySelectorAll('.block--specialities-list__card');
     const zones = document.querySelectorAll('.zone-schema');
     
