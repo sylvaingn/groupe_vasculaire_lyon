@@ -160,9 +160,81 @@
                     "parent_repeater": "field_contacts_centers"
                 }
             ]
+        },
+        {
+            "key": "field_contacts_social_tab",
+            "label": "Réseaux sociaux",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_contacts_social_instagram",
+            "label": "Instagram",
+            "name": "social_instagram",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https://instagram.com/..."
+        },
+        {
+            "key": "field_contacts_social_facebook",
+            "label": "Facebook",
+            "name": "social_facebook",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https://facebook.com/..."
+        },
+        {
+            "key": "field_contacts_social_linkedin",
+            "label": "LinkedIn",
+            "name": "social_linkedin",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": "https://linkedin.com/..."
         }
     ],
-    "location": [
+    "location":[
         [
             {
                 "param": "options_page",
@@ -181,5 +253,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1741772863
+    "modified": 1774361753
 }

@@ -54,6 +54,10 @@ add_action('contentify_parent_footer_content', function () {
             'menu-footer',
             'menu-footer-2'
     ];
+    $social_instagram = get_field('social_instagram', 'option');
+    $social_facebook = get_field('social_facebook', 'option');
+    $social_linkedin = get_field('social_linkedin', 'option');
+    $has_social = $social_instagram || $social_facebook || $social_linkedin;
     ?>
     <div class="container">
         <div class="footer--wrapper">
@@ -62,6 +66,25 @@ add_action('contentify_parent_footer_content', function () {
                     <img src="<?php echo esc_url(contentify_parent_get_custom_logo_url()); ?>"
                          alt="<?php bloginfo('name'); ?>">
                 </a>
+                <?php if ($has_social): ?>
+                    <div class="footer__social">
+                        <?php if ($social_instagram): ?>
+                            <a href="<?php echo esc_url($social_instagram); ?>" class="footer__social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        <?php endif; ?>
+                        <?php if ($social_facebook): ?>
+                            <a href="<?php echo esc_url($social_facebook); ?>" class="footer__social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        <?php endif; ?>
+                        <?php if ($social_linkedin): ?>
+                            <a href="<?php echo esc_url($social_linkedin); ?>" class="footer__social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <?php foreach ($menus as $menu):
