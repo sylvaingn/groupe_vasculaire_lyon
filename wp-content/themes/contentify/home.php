@@ -7,18 +7,21 @@
 
 get_header();
 
+$blocks = \ContentifyParent\Blocks\Blocks::get_instance();
+$archive_template = $blocks->get_block_area('archive-post');
+
 $page_for_posts = get_option('page_for_posts');
 $page_title = $page_for_posts ? get_the_title($page_for_posts) : __('Recommandations', TEXT_DOMAIN);
-$page_thumbnail_id = $page_for_posts ? get_post_thumbnail_id($page_for_posts) : null;
+$page_thumbnail_id = $archive_template ? get_post_thumbnail_id($archive_template->ID) : ($page_for_posts ? get_post_thumbnail_id($page_for_posts) : null);
 
 $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
 $args = [
-        'post_type' => 'post',
-        'posts_per_page' => 9,
-        'paged' => $paged,
-        'orderby' => 'date',
-        'order' => 'DESC'
+    'post_type' => 'post',
+    'posts_per_page' => 9,
+    'paged' => $paged,
+    'orderby' => 'date',
+    'order' => 'DESC'
 ];
 
 $posts_query = new WP_Query($args);
@@ -38,6 +41,9 @@ $posts_query = new WP_Query($args);
     </div>
 </section>
 
+<?php
+
+ob_start(); ?>
 <section class="archive-posts">
     <?php if ($posts_query->have_posts()): ?>
         <div class="archive-posts__grid">
@@ -50,10 +56,10 @@ $posts_query = new WP_Query($args);
             <div class="archive-posts__pagination">
                 <?php
                 echo paginate_links([
-                        'total' => $posts_query->max_num_pages,
-                        'current' => $paged,
-                        'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>',
-                        'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>',
+                    'total' => $posts_query->max_num_pages,
+                    'current' => $paged,
+                    'prev_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>',
+                    'next_text' => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>',
                 ]);
                 ?>
             </div>
@@ -64,5 +70,8 @@ $posts_query = new WP_Query($args);
         <p class="archive-posts__no-posts"><?php echo __('Aucune recommandation pour le moment.', TEXT_DOMAIN); ?></p>
     <?php endif; ?>
 </section>
+<?php $content = ob_get_clean(); ?>
+
+<?php echo $blocks->render_template('archive-post', $content); ?>
 
 <?php get_footer(); ?>

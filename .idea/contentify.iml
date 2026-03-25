@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/wp-root/wp-content/plugins/safe-svg/includes" isTestSource="false" packagePrefix="SafeSVG" />
       <sourceFolder url="file://$MODULE_DIR$/wp-root/wp-includes" isTestSource="false" packagePrefix="PHPMailer" />
       <sourceFolder url="file://$MODULE_DIR$/wp-root/wp-includes/SimplePie/src" isTestSource="false" packagePrefix="SimplePie" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/themes/contentify-parent" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-root" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
