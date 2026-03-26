@@ -105,10 +105,10 @@ add_action('contentify_parent_footer_content', function () {
                 </div>
             <?php endforeach; ?>
 
-            <div class="footer__col footer__col--newsletter">
-                <div class="footer__title title"><?php _e('Newsletter', TEXT_DOMAIN); ?></div>
-                <?php echo do_shortcode('[contact-form-7 id="c966573"]'); ?>
-            </div>
+<!--            <div class="footer__col footer__col--newsletter">-->
+<!--                <div class="footer__title title">--><?php //_e('Newsletter', TEXT_DOMAIN); ?><!--</div>-->
+<!--                --><?php //echo do_shortcode('[contact-form-7 id="c966573"]'); ?>
+<!--            </div>-->
         </div>
     </div>
     <?php
