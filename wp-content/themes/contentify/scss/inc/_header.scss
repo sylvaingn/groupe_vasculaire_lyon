@@ -23,6 +23,10 @@
 		animation: appears 0.5s var(--cubic-transition) forwards;
 	}
 
+	.site-logo img {
+		max-height: 80px;
+	}
+
 	.masthead--wrapper {
 		display: flex;
 		align-items: center;
